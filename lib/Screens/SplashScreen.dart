@@ -4,6 +4,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 
 import '../Colors.dart';
+import 'SignupScreen.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -68,7 +69,7 @@ class SplashScreen extends StatelessWidget {
                     width: 142,
                     child: ElevatedButton(onPressed: (){
                       Navigator.push(context, MaterialPageRoute(builder: (context)
-                      => LoginScreen() ) );
+                      =>  SignupScreen() ) );
                     },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: tdPink,
@@ -76,7 +77,7 @@ class SplashScreen extends StatelessWidget {
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(10.0),
                             ),
-                            minimumSize: Size(120,50)
+                            minimumSize: const Size(120,50)
                         ), child:
                     Text('Login',
                       style: GoogleFonts.raleway(

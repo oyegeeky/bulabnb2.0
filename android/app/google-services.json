@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "90463922936",
+    "project_id": "garmentline-11d58",
+    "storage_bucket": "garmentline-11d58.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:90463922936:android:93973406a79a6774eee90d",
+        "android_client_info": {
+          "package_name": "com.example.garmentline"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAVqwc4b1q4cuhM-KYf4cRle3ojgiRJz0Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

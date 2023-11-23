@@ -1,8 +1,15 @@
 import 'package:flutter/material.dart';
 
 const Color tdPink = Color(0xFFE5097F);
+const Color tdVoilet = Color(0xFF610A4A);
+const Color tdLightblue = Color(0xFFD5D8DF);
 
-const TextStyle textStyle =
+const Color tdGold = Color(0xFFFFCD84);
+
+
+
+
+const TextStyle textStyle00 =
           TextStyle(
           color: Color(0xFFE5097E),
           //fontSize: 15,
@@ -10,9 +17,16 @@ const TextStyle textStyle =
           fontWeight: FontWeight.w700,
 );
 
-//const Color tdBlue = Color(0xFF5F52EE);
-//
-// const Color tdBlack = Color(0xFF3A3A3A);
-// const Color tdGrey = Color(0xFF717171);
-//
-// const Color tdBGColor = Color(0xFFEEEFF5);
+
+
+
+@override
+Widget build(BuildContext context) {
+  Image? icon;
+
+
+  return ListTile(
+    leading: icon,
+  );
+
+}

@@ -1,7 +1,11 @@
+import 'package:clnt_magazine/Screens/SplashScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../Colors.dart';
+import '../main.dart';
+import 'HomePage.dart';
+import 'SignupScreen.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -121,7 +125,7 @@ class LoginScreen extends StatelessWidget {
                         width: 289.24,
                         child: ElevatedButton(onPressed: (){
                           Navigator.push(context, MaterialPageRoute(builder: (context)
-                          => const LoginScreen() ) );
+                          => const HomePage()) );
                         },
                           style: ElevatedButton.styleFrom(
                               backgroundColor: tdPink,
@@ -144,6 +148,143 @@ class LoginScreen extends StatelessWidget {
                           // ),
                         ),
                       ),
+                      const SizedBox(
+                        height: 32,
+                      ),
+                      Image.asset('assets/images/signup_tab.png'),
+                      SizedBox(
+                        height: 16,
+                      ),
+                       Row(
+                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          InkWell(
+                            child: Stack(
+                              children: [
+                                 Container(
+                                  width: 151,
+                                  height: 50,
+                                  // color: tdPink,
+                                  padding: const EdgeInsets.symmetric(horizontal: 29, vertical: 11),
+                                  decoration: ShapeDecoration(
+                                    color: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(width: 0.50),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 151,
+                                  height: 50,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                     //crossAxisAlignment: CrossAxisAlignment.center,
+                                     children: [
+                                       Image.asset('assets/images/google.png'),
+                                       SizedBox(
+                                         width: 5,
+                                       ),
+                                       Text(
+                                           'Google',
+                                           textAlign: TextAlign.center,
+                                           style: GoogleFonts.inter(
+                                               textStyle: Theme.of(context).textTheme.displayMedium,
+                                               fontSize: 18,
+                                               fontWeight: FontWeight.w400,
+                                               color: Colors.black
+                                           )
+                                       ),
+
+                                     ],
+                                   ),
+                                )
+                              ],
+
+                            ),
+                          ),
+                          InkWell(
+                            child: Stack(
+                              children: [
+                                Container(
+                                  width: 151,
+                                  height: 50,
+                                  // color: tdPink,
+                                  padding: const EdgeInsets.symmetric(horizontal: 29, vertical: 11),
+                                  decoration: ShapeDecoration(
+                                    color: Colors.white,
+                                    shape: RoundedRectangleBorder(
+                                      side: BorderSide(width: 0.50),
+                                      borderRadius: BorderRadius.circular(10),
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(
+                                  width: 151,
+                                  height: 50,
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    //crossAxisAlignment: CrossAxisAlignment.center,
+                                    children: [
+                                      Image.asset('assets/images/apple.png'),
+                                      SizedBox(
+                                        width: 5,
+                                      ),
+                                      Text(
+                                          'Apple',
+                                          textAlign: TextAlign.center,
+                                          style: GoogleFonts.inter(
+                                              textStyle: Theme.of(context).textTheme.displayMedium,
+                                              fontSize: 18,
+                                              fontWeight: FontWeight.w400,
+                                              color: Colors.black
+                                          )
+                                      ),
+
+                                    ],
+                                  ),
+                                ),
+                              ],
+
+                            ),
+                          ),
+
+                        ],
+                      ),
+                      SizedBox(
+                        height: 16,
+                      ),
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                              'Already have an account ? ',
+                              textAlign: TextAlign.center,
+                              style: GoogleFonts.raleway(
+                                  textStyle: Theme.of(context).textTheme.displayMedium,
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w400,
+                                  color: Colors.black
+                              )
+                          ),
+                          InkWell(
+                            onTap: () => Navigator.push(context, MaterialPageRoute(builder: (context)
+                            =>  SignupScreen() )),
+                            child: Text(
+                                'Login Now ',
+                                textAlign: TextAlign.center,
+                                style: GoogleFonts.raleway(
+                                    textStyle: Theme.of(context).textTheme.displayMedium,
+                                    fontSize: 18,
+                                    fontWeight: FontWeight.w600,
+                                    color: tdPink
+                                )
+                            ),
+                          ),
+
+                        ],
+                      )
+
 
 
                     ],
