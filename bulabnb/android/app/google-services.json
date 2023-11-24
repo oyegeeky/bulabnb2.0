@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "880088750686",
+    "project_id": "bulabnb",
+    "storage_bucket": "bulabnb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:880088750686:android:05058f10896471314ef2cf",
+        "android_client_info": {
+          "package_name": "com.example.bulabnb"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrKY0r3YrYmSeDfmuveU7ygi7hBBZ6kTk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
