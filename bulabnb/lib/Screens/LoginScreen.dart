@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
+import '../Controllers/Colors.dart';
 import '../Controllers/signup_controllers.dart';
 import 'otpScreen.dart';
 
@@ -30,8 +31,7 @@ class LoginScreen extends StatelessWidget {
               width: double.infinity,
               height: 180,
               //color: Colors.pink,
-              child: Image.asset("assets/images/LoginScreenIMG01.png",
-                  fit: BoxFit.fill),
+
             ),
             Padding(
               padding: const EdgeInsets.all(16.0),
@@ -53,7 +53,7 @@ class LoginScreen extends StatelessWidget {
                                   textStyle: Theme.of(context).textTheme.displayMedium,
                                   fontSize: 27,
                                   fontWeight: FontWeight.w600,
-                                  color: Color(0xFF2196F3)
+                                  color: Colors.black
                               )
                           ),
                           const SizedBox(
@@ -86,7 +86,7 @@ class LoginScreen extends StatelessWidget {
                                 //prefixIcon: Icon(Icons.phone, color: Color(0xFF2196F3)),
                                 //suffixIcon: phoneNumber.text.length>9 ? const Icon(Icons.done_all_outlined, color: Colors.green): null,
                                 contentPadding: EdgeInsets.all(15), // Adjust the content padding
-                                hintText: 'Email or Mobile number',
+                                hintText: 'Enter Mobile number',
                                 enabledBorder: OutlineInputBorder(
                                   borderRadius: BorderRadius.all(Radius.circular(12.0)), // Adjust border radius
                                   borderSide: BorderSide(
@@ -117,76 +117,9 @@ class LoginScreen extends StatelessWidget {
 
 
                           //'Enter Full Name',
-                          const SizedBox(
-                            height: 60, // Increase the height of the SizedBox
-                            child: TextField(
 
-                              obscureText : true,
-                              style: TextStyle(
-                                fontSize: 20, // Adjust the font size
-                              ),
-                              decoration:   InputDecoration(
-                                suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Color(
-                                    0xFF8E8D8D)),
-                                contentPadding: EdgeInsets.all(15), // Adjust the content padding
-                                hintText: 'Password',
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(12.0)), // Adjust border radius
-                                  borderSide: BorderSide(
-                                    width: 1,
-                                    color: Color(0xFFA5A5A5),
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(20.0)), // Adjust border radius
-                                  borderSide: BorderSide(
-                                    width: 2,
-                                    color: Color(0xFFA5A5A5),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
                           const SizedBox(
                             height: 12,
-                          ),
-
-                          const SizedBox(
-                            height: 60, // Increase the height of the SizedBox
-                            child: TextField(
-                              obscureText : true,
-                              //controller:  companyName,
-
-                              style: TextStyle(
-                                fontSize: 20,
-                                // Adjust the font size
-                              ),
-                              decoration: InputDecoration(
-
-
-                                contentPadding: EdgeInsets.all(15), // Adjust the content padding
-                                hintText: 'Confirm Password',
-                                suffixIcon: Icon(Icons.remove_red_eye_outlined, color: Color(
-                                    0xFF8E8D8D)),
-
-                                enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(12.0)), // Adjust border radius
-                                  borderSide: BorderSide(
-                                    width: 1,
-                                    color: Color(0xFFA5A5A5),
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.all(Radius.circular(20.0)), // Adjust border radius
-                                  borderSide: BorderSide(
-                                    width: 2,
-                                    color: Color(0xFFA5A5A5),),
-                                ),
-                              ),
-                            ),
-                          ),
-                          const SizedBox(
-                            height: 20,
                           ),
 
 
@@ -203,7 +136,7 @@ class LoginScreen extends StatelessWidget {
                                 Get.to(() => const OTPScreen());}
                             },
                               style: ElevatedButton.styleFrom(
-                                  backgroundColor: Color(0xFF2196F3),
+                                  backgroundColor: tdRed,
                                   // shadowColor: Colors.grey,
                                   shape: RoundedRectangleBorder(
                                     borderRadius: BorderRadius.circular(910.0),
@@ -222,7 +155,7 @@ class LoginScreen extends StatelessWidget {
                           ),
 
                           const SizedBox(
-                            height: 32,
+                            height: 64,
                           ),
 
                           Container(

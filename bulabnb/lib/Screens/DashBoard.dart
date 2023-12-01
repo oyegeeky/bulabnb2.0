@@ -1,79 +1,61 @@
-import 'package:bulabnb/Screens/HomePage.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class DashBoard extends StatelessWidget {
-  const DashBoard({super.key});
+import 'NavBarScreens/FavScreen.dart';
+import 'NavBarScreens/HomeScreen.dart';
+import 'NavBarScreens/ProfileScreen.dart';
+import 'NavBarScreens/SearchScreeen.dart';
+
+class MyHomePage extends StatefulWidget {
+  @override
+  _MyHomePageState createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
+  int _currentIndex = 0;
+
+  final List<Widget> _pages = [
+    HomeScreen(),
+    SearchPage(),
+    FavoritesPage(),
+    ProfilePage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            Container(
-              width: double.infinity,
-              height: 300,
-              //color: Colors.pink,
-              child: Image.asset("assets/images/otpSuccess.png",
-                  fit: BoxFit.fill),
-            ),
-
-            Text(
-                'Account Verified',
-                textAlign: TextAlign.left,
-                style: GoogleFonts.raleway(
-                    textStyle: Theme.of(context).textTheme.displayMedium,
-                    fontSize: 25,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.black
-                )
-            ),
-            const SizedBox(height: 20,),
-            Text(
-                'Your account has been verified successfully.',
-                textAlign: TextAlign.left,
-                style: GoogleFonts.raleway(
-                    textStyle: Theme.of(context).textTheme.displayMedium,
-                    fontSize: 14,
-                    fontWeight: FontWeight.w600,
-                    color: Colors.grey
-                )
-            ),
-            const SizedBox(height: 30,),
-
-
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: SizedBox(
-                height: 60,
-                width: double.infinity,
-                child: ElevatedButton(onPressed: (){
-                  Get.to(() => const HomePage ());
-                },
-                  style: ElevatedButton.styleFrom(
-                      backgroundColor: const Color(0xFF2196F3),
-                      // shadowColor: Colors.grey,
-                      shape: RoundedRectangleBorder(
-                        borderRadius: BorderRadius.circular(910.0),
-                      ),
-                      minimumSize: const Size(120,50)
-                  ), child:
-                  Text('Get Started',
-                    style: GoogleFonts.raleway(
-                        textStyle: Theme.of(context).textTheme.displayMedium,
-                        fontSize:16,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.white
-                    ),
-                  ),),
-              ),
-            ),
-
-          ],
-        )
-
+      body: Center(
+        child: _pages[_currentIndex],
+      ),
+      bottomNavigationBar: BottomNavigationBar(
+        currentIndex: _currentIndex,
+        type: BottomNavigationBarType.fixed,
+        items: [
+          _buildNavItem(Icons.home, "Home"),
+          _buildNavItem(Icons.search, "Search"),
+          _buildNavItem(Icons.favorite, "Favorites"),
+          _buildNavItem(Icons.person, "Profile"),
+        ],
+        onTap: (index) {
+          setState(() {
+            _currentIndex = index;
+          });
+        },
+      ),
     );
   }
-}
+
+  BottomNavigationBarItem _buildNavItem(IconData icon, String label) {
+    return BottomNavigationBarItem(
+      icon: Icon(
+        icon,
+        size: 30, // Adjust the size as needed
+      ),
+      label: label,
+    );
+  }
+
+  }
+
+
+

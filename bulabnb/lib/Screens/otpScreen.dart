@@ -1,3 +1,4 @@
+import 'package:bulabnb/Controllers/Colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
@@ -65,7 +66,7 @@ class OTPScreen extends StatelessWidget {
                 OTPController.instance.verifyOTP(otp);
               },
                 style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF2196F3),
+                  backgroundColor: tdRed,
                   // shadowColor: Colors.grey,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(910.0),

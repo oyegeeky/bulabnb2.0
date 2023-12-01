@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-const Color tdPink = Color(0xFF2196F3);
+const Color tdRed = Color(0xFFF32121);
 
 const TextStyle textStyle =
 TextStyle(
-  color: Color(0xFF2196F3),
+  color: Color(0xFFF32121),
   //fontSize: 15,
   fontFamily: 'Raleway',
   fontWeight: FontWeight.w700,

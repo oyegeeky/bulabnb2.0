@@ -6,6 +6,13 @@ import 'package:google_fonts/google_fonts.dart';
 import '../Colors.dart';
 import 'LoginScreen.dart';
 
+
+// var fullName = TextEditingController();
+//
+// var companyName = TextEditingController();
+//
+// var phoneNumber = TextEditingController();
+
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 

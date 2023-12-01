@@ -13,31 +13,25 @@ class WelcomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.black,
         body: Column(
           mainAxisAlignment: MainAxisAlignment.end,
           children: [
             InkWell(
               child: Center(
                 child: Container(
-                  width: 180,
-                  height: 50,
+                  width: double.infinity,
+                  height: 300,
                   //color: Colors.pink,
-                  child: Image.asset("assets/images/LOGO.png",
-                      fit: BoxFit.fill),
+                  child: Image.asset("assets/images/LOGO.gif",
+                      fit: BoxFit.contain),
                 ),
               ),
                 onTap: (){Get.to(() =>  LoginScreen());},
 
 
             ),
-            SizedBox(height: 180,),
-            Container(
-              width: double.infinity,
-              height: 200,
-              //color: Colors.pink,
-              child: Image.asset("assets/images/SSCREEN02.png",
-                  fit: BoxFit.fill),
-            )
+            SizedBox(height: 200,)
 
           ],
         )
